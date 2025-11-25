@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - BestGames</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-dark">
+    <header class="header header--simple">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg class="logo__icon" width="40" height="40" viewBox="0 0 40 40">
+                    <path fill="#8B5FBF" d="M20 0C8.96 0 0 8.96 0 20s8.96 20 20 20 20-8.96 20-20S31.04 0 20 0zm-2 30l-8-8 2.83-2.83L18 24.34l10.17-10.17L31 16l-13 14z"/>
+                </svg>
+                <span class="logo__text">BestGames</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="main main--center">
+        <div class="container">
+            <div class="auth-form">
+                <h1 class="auth-form__title">Регистрация</h1>
+                <form class="form" id="registerForm">
+                    <div class="form__group">
+                        <label for="email" class="form__label">E-mail *</label>
+                        <input type="email" id="email" name="email" class="form__input" required>
+                        <span class="form__error" id="emailError"></span>
+                    </div>
+                    
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="lastName" class="form__label">Фамилия *</label>
+                            <input type="text" id="lastName" name="lastName" class="form__input" required>
+                            <span class="form__error" id="lastNameError"></span>
+                        </div>
+                        <div class="form__group">
+                            <label for="firstName" class="form__label">Имя *</label>
+                            <input type="text" id="firstName" name="firstName" class="form__input" required>
+                            <span class="form__error" id="firstNameError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="birthDate" class="form__label">Дата рождения *</label>
+                        <input type="date" id="birthDate" name="birthDate" class="form__input" required>
+                        <span class="form__error" id="birthDateError"></span>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="phone" class="form__label">Номер телефона *</label>
+                        <input type="tel" id="phone" name="phone" class="form__input" placeholder="+7 (XXX) XXX-XX-XX" required>
+                        <span class="form__error" id="phoneError"></span>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="password" class="form__label">Пароль *</label>
+                        <input type="password" id="password" name="password" class="form__input" required>
+                        <span class="form__error" id="passwordError"></span>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="confirmPassword" class="form__label">Повтор пароля *</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" class="form__input" required>
+                        <span class="form__error" id="confirmPasswordError"></span>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="checkbox">
+                            <input type="checkbox" id="agree" name="agree" required>
+                            <span class="checkbox__checkmark"></span>
+                            <span class="checkbox__text">Я согласен на обработку персональных данных</span>
+                        </label>
+                        <span class="form__error" id="agreeError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full">Зарегистрироваться</button>
+                    
+                    <div class="auth-form__links">
+                        <a href="login.html" class="auth-form__link">Уже есть аккаунт? Войти</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/register.js"></script>
+</body>
+</html>

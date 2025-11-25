@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Административная панель - BestGames</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body class="theme-dark">
+    <header class="header header--admin">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <svg class="logo__icon" width="40" height="40" viewBox="0 0 40 40">
+                        <path fill="#8B5FBF" d="M20 0C8.96 0 0 8.96 0 20s8.96 20 20 20 20-8.96 20-20S31.04 0 20 0zm-2 30l-8-8 2.83-2.83L18 24.34l10.17-10.17L31 16l-13 14z"/>
+                    </svg>
+                    <span class="logo__text">BestGames Admin</span>
+                </a>
+                <nav class="admin-nav">
+                    <a href="index.html" class="admin-nav__link">На сайт</a>
+                    <button class="btn btn--secondary btn--small" id="logoutBtn">Выйти</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="admin-panel">
+                <h1 class="admin-panel__title">Административная панель</h1>
+                
+                <div class="admin-tabs">
+                    <button class="admin-tabs__tab admin-tabs__tab--active" data-tab="games">Управление играми</button>
+                    <button class="admin-tabs__tab" data-tab="users">Пользователи</button>
+                    <button class="admin-tabs__tab" data-tab="orders">Заказы</button>
+                </div>
+
+                <!-- Форма добавления игры -->
+                <div class="admin-content admin-content--active" id="gamesTab">
+                    <h2 class="admin-content__title">Добавить новую игру</h2>
+                    
+                    <form class="form form--admin" id="gameForm" enctype="multipart/form-data">
+                        <div class="form__group">
+                            <label for="gameName" class="form__label">Название игры *</label>
+                            <input type="text" id="gameName" name="gameName" class="form__input" maxlength="30" required>
+                            <span class="form__error" id="gameNameError"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="gameGenre" class="form__label">Жанр *</label>
+                            <select id="gameGenre" name="gameGenre" class="form__input" required>
+                                <option value="">Выберите жанр</option>
+                                <option value="rpg">RPG</option>
+                                <option value="shooter">Шутер</option>
+                                <option value="strategy">Стратегия</option>
+                                <option value="racing">Гонки</option>
+                                <option value="adventure">Приключения</option>
+                                <option value="sports">Спортивные</option>
+                            </select>
+                            <span class="form__error" id="gameGenreError"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="gameImage" class="form__label">Изображение игры *</label>
+                            <input type="file" id="gameImage" name="gameImage" accept="image/jpeg,image/jpg" required>
+                            <span class="form__help">Формат: JPG/JPEG, макс. размер: 2MB</span>
+                            <span class="form__error" id="gameImageError"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="gameDeveloper" class="form__label">Компания-разработчик *</label>
+                            <input type="text" id="gameDeveloper" name="gameDeveloper" class="form__input" required>
+                            <span class="form__error" id="gameDeveloperError"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="gameDescription" class="form__label">Описание</label>
+                            <textarea id="gameDescription" name="gameDescription" class="form__input form__input--textarea" rows="4" maxlength="100"></textarea>
+                            <span class="form__help">Максимум 100 символов</span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="gamePrice" class="form__label">Стоимость *</label>
+                            <input type="number" id="gamePrice" name="gamePrice" class="form__input" step="0.01" min="100" required>
+                            <span class="form__error" id="gamePriceError"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary">Добавить игру</button>
+                    </form>
+
+                    <!-- Список существующих игр -->
+                    <div class="admin-games-list">
+                        <h3 class="admin-games-list__title">Существующие игры</h3>
+                        <div class="games-list">
+                            <div class="games-list__item">
+                                <img src="images/games/cyberpunk.jpg" alt="Cyberpunk 2077" class="games-list__image">
+                                <div class="games-list__info">
+                                    <h4 class="games-list__name">Cyberpunk 2077</h4>
+                                    <p class="games-list__details">RPG • CD Projekt Red • 2999 ₽</p>
+                                </div>
+                                <div class="games-list__actions">
+                                    <button class="btn btn--secondary btn--small">Редактировать</button>
+                                    <button class="btn btn--danger btn--small">Удалить</button>
+                                </div>
+                            </div>
+                            <!-- Добавьте больше игр по аналогии -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Другие вкладки -->
+                <div class="admin-content" id="usersTab">
+                    <h2 class="admin-content__title">Управление пользователями</h2>
+                    <p>Функционал в разработке...</p>
+                </div>
+
+                <div class="admin-content" id="ordersTab">
+                    <h2 class="admin-content__title">Управление заказами</h2>
+                    <p>Функционал в разработке...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

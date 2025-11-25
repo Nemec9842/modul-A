@@ -1,0 +1,20 @@
+.theme-light {
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --border-color: #e0e0e0;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Дополнительные стили для светлой темы */
+.theme-light .game-card,
+.theme-light .advantage,
+.theme-light .auth-form {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+}
+
+.theme-light .slider__info {
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+}

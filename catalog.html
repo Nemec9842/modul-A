@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог игр - BestGames</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body class="theme-dark">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <svg class="logo__icon" width="40" height="40" viewBox="0 0 40 40">
+                        <path fill="#8B5FBF" d="M20 0C8.96 0 0 8.96 0 20s8.96 20 20 20 20-8.96 20-20S31.04 0 20 0zm-2 30l-8-8 2.83-2.83L18 24.34l10.17-10.17L31 16l-13 14z"/>
+                    </svg>
+                    <span class="logo__text">BestGames</span>
+                </a>
+                
+                <nav class="nav">
+                    <button class="nav__burger" aria-label="Открыть меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html#search" class="nav__link">Поиск</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="login.html" class="nav__link">Войти</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="profile.html" class="nav__link">Личный кабинет</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="catalog.html" class="nav__link nav__link--active">Каталог игр</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="catalog">
+                <h1 class="catalog__title">Каталог игр</h1>
+                
+                <div class="catalog__content">
+                    <!-- Фильтры для десктопной версии -->
+                    <aside class="catalog__filters catalog__filters--desktop">
+                        <h3 class="filters__title">Фильтры по жанрам</h3>
+                        <div class="filters__list">
+                            <label class="filter__item">
+                                <input type="checkbox" name="genre" value="rpg">
+                                <span class="filter__checkmark"></span>
+                                <span class="filter__text">RPG</span>
+                            </label>
+                            <label class="filter__item">
+                                <input type="checkbox" name="genre" value="shooter">
+                                <span class="filter__checkmark"></span>
+                                <span class="filter__text">Шутер</span>
+                            </label>
+                            <label class="filter__item">
+                                <input type="checkbox" name="genre" value="strategy">
+                                <span class="filter__checkmark"></span>
+                                <span class="filter__text">Стратегия</span>
+                            </label>
+                            <label class="filter__item">
+                                <input type="checkbox" name="genre" value="racing">
+                                <span class="filter__checkmark"></span>
+                                <span class="filter__text">Гонки</span>
+                            </label>
+                            <label class="filter__item">
+                                <input type="checkbox" name="genre" value="adventure">
+                                <span class="filter__checkmark"></span>
+                                <span class="filter__text">Приключения</span>
+                            </label>
+                            <label class="filter__item">
+                                <input type="checkbox" name="genre" value="sports">
+                                <span class="filter__checkmark"></span>
+                                <span class="filter__text">Спортивные</span>
+                            </label>
+                        </div>
+                        <button class="btn btn--primary btn--full" id="applyFilters">Применить фильтры</button>
+                    </aside>
+
+                    <!-- Кнопка открытия фильтров для мобильных устройств -->
+                    <button class="catalog__filters-toggle" id="filtersToggle">
+                        <span>Фильтры</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16">
+                            <path fill="currentColor" d="M8 11L3 6h10l-5 5z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Сетка игр -->
+                    <div class="catalog__games">
+                        <div class="games-grid">
+                            <div class="game-card">
+                                <img src="images/games/cyberpunk.jpg" alt="Cyberpunk 2077" class="game-card__image">
+                                <div class="game-card__content">
+                                    <h3 class="game-card__title">Cyberpunk 2077</h3>
+                                    <p class="game-card__genre">RPG</p>
+                                    <p class="game-card__developer">CD Projekt Red</p>
+                                    <div class="game-card__rating">
+                                        <span class="star star--filled">★</span>
+                                        <span class="star star--filled">★</span>
+                                        <span class="star star--filled">★</span>
+                                        <span class="star star--filled">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                    <p class="game-card__price">2999 ₽</p>
+                                    <a href="#" class="btn btn--secondary">Подробнее</a>
+                                </div>
+                            </div>
+
+                            <div class="game-card">
+                                <img src="images/games/witcher3.jpg" alt="The Witcher 3" class="game-card__image">
+                                <div class="game-card__content">
+                                    <h3 class="game-card__title">The Witcher 3: Wild Hunt</h3>
+                                    <p class="game-card__genre">RPG</p>
+                                    <p class="game-card__developer">CD Projekt Red</p>
+                                    <div class="game-card__rating">
+                                        <span class="star star--filled">★</span>
+                                        <span class="star star--filled">★</span>
+                                        <span class="star star--filled">★</span>
+                                        <span class="star star--filled">★</span>
+                                        <span class="star star--filled">★</span>
+                                    </div>
+                                    <p class="game-card__price">1999 ₽</p>
+                                    <a href="#" class="btn btn--secondary">Подробнее</a>
+                                </div>
+                            </div>
+
+                            <div class="game-card">
+                                <img src="images/games/elden-ring.jpg" alt="Elden Ring" class="game-card__image">
+                                <div class="game-card__content">
+                                    <h3 class="game-card__title">Elden Ring</h3>
+                                    <p class="game-card__genre">RPG</p>
+                                    <p class="game-card__developer">FromSoftware</p>
+                                    <div class="game-card__rating">
+                                        <span class="star star--filled">★</span>
+                                        <span class="star star--filled">★</span>
+                                        <span class="star star--filled">★</span>
+                                        <span class="star star--filled">★</span>
+                                        <span class="star star--filled">★</span>
+                                    </div>
+                                    <p class="game-card__price">3999 ₽</p>
+                                    <a href="#" class="btn btn--secondary">Подробнее</a>
+                                </div>
+                            </div>
+
+                            <!-- Добавьте больше карточек игр по аналогии -->
+                        </div>
+
+                        <!-- Пагинация -->
+                        <div class="pagination">
+                            <button class="pagination__btn pagination__btn--prev" disabled>Назад</button>
+                            <div class="pagination__pages">
+                                <button class="pagination__page pagination__page--active">1</button>
+                                <button class="pagination__page">2</button>
+                                <button class="pagination__page">3</button>
+                            </div>
+                            <button class="pagination__btn pagination__btn--next">Вперед</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Мобильные фильтры -->
+    <div class="mobile-filters" id="mobileFilters">
+        <div class="mobile-filters__content">
+            <div class="mobile-filters__header">
+                <h3>Фильтры</h3>
+                <button class="mobile-filters__close" id="closeFilters">&times;</button>
+            </div>
+            <div class="filters__list">
+                <!-- Тот же список фильтров что и в десктопной версии -->
+            </div>
+            <button class="btn btn--primary btn--full">Применить</button>
+        </div>
+    </div>
+
+    <script src="js/catalog.js"></script>
+</body>
+</html>
